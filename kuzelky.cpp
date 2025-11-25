@@ -45,7 +45,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(0);
+        
         break;
         // pozice na levé půlce dráhy
     case 1: // srazí jednu kuželku
@@ -57,7 +57,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(0.5);
+
         break;
 
     case 2:
@@ -69,7 +69,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(1);
+
         break;
 
     case 3:
@@ -81,7 +81,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(1.5);
+
         break;
 
     case 4:
@@ -93,7 +93,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||     8   ||",
             "||    8    ||",
         };
-        hody.push_back(2);
+
         break;
 
     case 5:
@@ -105,7 +105,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||     8   ||",
             "||    8    ||",
         };
-        hody.push_back(3);
+
         break;
 
     case 6:
@@ -117,7 +117,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||         ||",
             "||         ||",
         };
-        hody.push_back(4.5);
+
         break;
 
     case 7:
@@ -145,7 +145,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||         ||",
             "||         ||",
         };
-        hody.push_back(4.5);
+
         break;
 
     case 9:
@@ -157,7 +157,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8     ||",
             "||    8    ||",
         };
-        hody.push_back(3);
+
         break;
 
     case 10:
@@ -169,7 +169,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8     ||",
             "||    8    ||",
         };
-        hody.push_back(2);
+
         break;
 
     case 11:
@@ -181,7 +181,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(1.5);
+
         break;
 
     case 12:
@@ -193,7 +193,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(1);
+
         break;
 
     case 13:
@@ -205,7 +205,7 @@ std::vector<std::string> getDraha(int pozice) {
             "||   8 8   ||",
             "||    8    ||",
         };
-        hody.push_back(0.5);
+
         break;
 
     }
@@ -233,6 +233,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
     case 1:
         if (pozice == 0 || pozice == 14) {
             draha2 = getDraha(1);
+            hody.push_back(1);
         }
         else if (pozice == 8) {
             //draha2 = getDraha(7); // spare
@@ -248,7 +249,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(6);
+            hody.push_back(7);
         }
         else if (pozice == 10) {
             draha2 = {
@@ -259,7 +260,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(5);
         }
         else if (pozice == 11) {
             draha2 = {
@@ -270,7 +271,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(4);
         }
         else if (pozice == 12) {
             draha2 = {
@@ -281,7 +282,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(3);
         }
         else if (pozice == 13) {
             draha2 = {
@@ -292,16 +293,18 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(2);
         }
         else {
             draha2 = getDraha(pozice);
+            hody.push_back(1);
         }
         break;
 
     case 2:
         if (pozice == 0 || pozice == 1 || pozice == 14) {
             draha2 = getDraha(2);
+            hody.push_back(2);
         }
         else if (pozice == 8) {
             //draha2 = getDraha(7); // spare
@@ -319,7 +322,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(6);
         }
         else if (pozice == 11) {
             draha2 = {
@@ -330,7 +333,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(5);
         }
         else if (pozice == 12) {
             draha2 = {
@@ -341,7 +344,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(4);
         }
         else if (pozice == 13) {
             draha2 = {
@@ -352,16 +355,18 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(3);
         }
         else {
             draha2 = getDraha(pozice);
+            hody.push_back(2);
         }
         break;
 
     case 3:
         if (pozice == 0 || pozice == 1 || pozice == 2 || pozice == 14) {
             draha2 = getDraha(3);
+            hody.push_back(3);
         }
         else if (pozice == 10) {
             draha2 = {
@@ -372,7 +377,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(7);
         }
         else if (pozice == 11) {
             draha2 = {
@@ -383,7 +388,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(6);
         }
         else if (pozice == 12) {
             draha2 = {
@@ -394,7 +399,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(5);
         }
         else if (pozice == 13) {
             draha2 = {
@@ -405,7 +410,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(4);
         }
         else {
             draha2 = getDraha2(2, pozice);
@@ -415,6 +420,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
     case 4:
         if (pozice == 0 || pozice == 1 || pozice == 2 || pozice == 3 || pozice == 14) {
             draha2 = getDraha(4);
+            hody.push_back(4);
         }
         else if (pozice == 9) {
             draha2 = {
@@ -425,7 +431,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||         ||",
                 "||    8    ||",
             };
-            hody.push_back(5);
+            hody.push_back(9);
         }
         else if (pozice == 10) {
             draha2 = {
@@ -436,7 +442,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||         ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(8);
         }
         else if (pozice == 11) {
             draha2 = {
@@ -447,7 +453,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(7);
         }
         else if (pozice == 12) {
             draha2 = {
@@ -458,7 +464,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(6);
         }
         else if (pozice == 13) {
             draha2 = {
@@ -469,10 +475,11 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(5);
         }
         else {
             draha2 = getDraha(pozice);
+            hody.push_back(4);
         }
         break;
 
@@ -489,7 +496,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(8);
         }
         else if (pozice == 13) {
             draha2 = {
@@ -500,7 +507,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(7);
         }
         else if (pozice == 6 || pozice == 7 || pozice == 8) {
             //draha2 = getDraha(pozice); // spare
@@ -518,16 +525,19 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
         }
         else {
             draha2 = getDraha(6);
+            hody.push_back(9);
         }
         break;
 
     case 7:
         draha2 = getDraha(7); // strike
+        hody.push_back(10);
         break;
 
     case 8:
         if (pozice == 0 || pozice == 14 || pozice == 8 || pozice == 9 || pozice == 10 || pozice == 11 || pozice == 12 || pozice == 13) {
             draha2 = getDraha(8);
+            hody.push_back(9);
         }
         else {
             //draha2 = getDraha(7); // spare
@@ -549,7 +559,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(8);
         }
         else if (pozice == 4 || pozice == 5)
         {
@@ -562,6 +572,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
         }
         else {
             draha2 = getDraha(9);
+            hody.push_back(6);
         }
         break;
 
@@ -575,7 +586,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(5);
         }
         else if (pozice == 2) {
             draha2 = {
@@ -586,7 +597,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(6);
         }
         else if (pozice == 3)
         {
@@ -598,7 +609,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8     ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(7);
         }
         else if (pozice == 4)
         {
@@ -618,12 +629,14 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
         }
         else {
             draha2 = getDraha(10);
+            hody.push_back(4);
         }
         break;
 
     case 11:
         if (pozice == 0 || pozice == 14 || pozice == 11 || pozice == 12 || pozice == 13) {
             draha2 = getDraha(11);
+            hody.push_back(3);
         }
         else if (pozice == 6) {
             //draha2 = getDraha(7); // spare
@@ -638,7 +651,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(5);
+            hody.push_back(8);
         }
         else if (pozice == 4) {
             draha2 = {
@@ -649,7 +662,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(7);
         }
         else if (pozice == 3) {
             draha2 = {
@@ -660,7 +673,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(6);
         }
         else if (pozice == 2) {
             draha2 = {
@@ -671,7 +684,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(5);
         }
         else if (pozice == 1) {
             draha2 = {
@@ -682,16 +695,18 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(4);
         }
         else {
             draha2 = getDraha(pozice);
+            hody.push_back(3);
         }
         break;
 
     case 12:
         if (pozice == 12 || pozice == 13 || pozice == 0 || pozice == 14) {
             draha2 = getDraha(12);
+            hody.push_back(2);
         }
         else if (pozice == 6) {
             //draha2 = getDraha(7); // spare
@@ -706,7 +721,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(6);
+            hody.push_back(8);
         }
         else if (pozice == 4) {
             draha2 = {
@@ -717,7 +732,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(6);
         }
         else if (pozice == 3) {
             draha2 = {
@@ -728,7 +743,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(5);
         }
         else if (pozice == 2) {
             draha2 = {
@@ -739,7 +754,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(4);
         }
         else if (pozice == 1) {
             draha2 = {
@@ -750,16 +765,18 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(3);
         }
         else {
             draha2 = getDraha(pozice);
+            hody.push_back(2);
         }
         break;
 
     case 13:
         if (pozice == 13 || pozice == 0 || pozice == 14) {
             draha2 = getDraha(13);
+            hody.push_back(1);
         }
         else if (pozice == 6) {
             //draha2 = getDraha(7); // spare
@@ -774,7 +791,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(6);
+            hody.push_back(7);
         }
         else if (pozice == 4) {
             draha2 = {
@@ -785,7 +802,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||     8   ||",
                 "||    8    ||",
             };
-            hody.push_back(4);
+            hody.push_back(5);
         }
         else if (pozice == 3) {
             draha2 = {
@@ -796,7 +813,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(3);
+            hody.push_back(4);
         }
         else if (pozice == 2) {
             draha2 = {
@@ -807,7 +824,7 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(2);
+            hody.push_back(3);
         }
         else if (pozice == 1) {
             draha2 = {
@@ -818,14 +835,16 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
                 "||   8 8   ||",
                 "||    8    ||",
             };
-            hody.push_back(1);
+            hody.push_back(2);
         }
         else {
             draha2 = getDraha(pozice);
+            hody.push_back(1);
         }
         break;
     default:
         draha2 = getDraha(pozice);
+        hody.push_back(0);
         break;
     }
 
