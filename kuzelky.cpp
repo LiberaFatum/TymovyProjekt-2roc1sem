@@ -7,6 +7,25 @@ std::vector<double> hody;
 int pozice = 0;
 int pozice2 = 0;
 
+void spare() {
+    std::vector<std::string> drahaSpare = {
+        "*************",
+        "||~~~~~~~~~||",
+        "||         ||",
+        "||         ||",
+        "||         ||",
+        "||         ||",
+    };
+
+    int indexPosledni = hody.size() - 1;
+    double predchoziHod = hody[indexPosledni];
+    double sparePocetKuzelek = 10 - predchoziHod;
+    hody.push_back(sparePocetKuzelek);
+
+    for (auto& l : drahaSpare)
+        std::cout << l << "\n";
+}
+
 void vypisZlabky() {
     for (int i = 0; i < 15; ++i) {
         std::cout << "||         ||" << "\n";
@@ -216,7 +235,9 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             draha2 = getDraha(1);
         }
         else if (pozice == 8) {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
+            
         }
         else if (pozice == 9) {
             draha2 = {
@@ -283,7 +304,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             draha2 = getDraha(2);
         }
         else if (pozice == 8) {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else if (pozice == 9) {
             draha2 = getDraha2(1, pozice); // Nahradit rekurzivní volání správným getterem
@@ -481,7 +503,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             hody.push_back(1);
         }
         else if (pozice == 6 || pozice == 7 || pozice == 8) {
-            draha2 = getDraha(pozice); // spare
+            //draha2 = getDraha(pozice); // spare
+            spare();
         }
         else {
             draha2 = getDraha(5);
@@ -490,7 +513,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
 
     case 6:
         if (pozice == 7 || pozice == 8 || pozice == 9 || pozice == 10 || pozice == 11 || pozice == 12 || pozice == 13) {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else {
             draha2 = getDraha(6);
@@ -506,7 +530,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             draha2 = getDraha(8);
         }
         else {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         break;
 
@@ -532,7 +557,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
         }
         else if (pozice == 6 || pozice == 7)
         {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else {
             draha2 = getDraha(9);
@@ -584,7 +610,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
         }
         else if (pozice == 6 || pozice == 7)
         {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else if (pozice == 8 || pozice == 9) {
             draha2 = getDraha(pozice);
@@ -599,7 +626,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             draha2 = getDraha(11);
         }
         else if (pozice == 6) {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else if (pozice == 5) {
             draha2 = {
@@ -666,7 +694,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             draha2 = getDraha(12);
         }
         else if (pozice == 6) {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else if (pozice == 5) {
             draha2 = {
@@ -733,7 +762,8 @@ static std::vector<std::string> getDraha2(int pozice2, int pozice) {
             draha2 = getDraha(13);
         }
         else if (pozice == 6) {
-            draha2 = getDraha(7); // spare
+            //draha2 = getDraha(7); // spare
+            spare();
         }
         else if (pozice == 5) {
             draha2 = {

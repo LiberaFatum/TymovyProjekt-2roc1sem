@@ -86,8 +86,8 @@ int main() {
     }
 	//vypis celeho skore
     std::cout << "Konec hry! Celkove skore: ";
-     skore();
-	 std::cout << "\n";
+    skore();
+	std::cout << "\n";
 
     return 0;
 }
