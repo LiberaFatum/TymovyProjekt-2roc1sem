@@ -2,8 +2,8 @@
 #include <iostream>
 #include "vypocet_skore.h"
 
-// Deklarace funkce pro výpočet skóre 
-int vypocetSkore(const std::vector<int>& hody) {
+// Deklarace funkce pro výpočet skóre (Vaše implementace)
+int vypocetSkore(const std::vector<double>& hody) {
     int celkoveSkore = 0;
     int indexHodu = 0; // Index pro procházení pole 'hody'
 
